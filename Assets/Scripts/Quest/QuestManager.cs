@@ -18,7 +18,7 @@ public class QuestManager : MonoBehaviour
     [Header("Äù½ºÆ® ¸ñ·Ï")]
     public QuestData[] availableQuests;
 
-    private QuestData currentQuest;
+    public QuestData currentQuest;
     private int currentQuestIndex = 0;
 
     void Awake()
