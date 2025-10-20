@@ -13,10 +13,21 @@ public class InventorySlot : MonoBehaviour
     public Text amountText;                                     //개수 텍스트
     public GameObject emptySlotImage;                           //빈 슬롯일 때 보여줄 이미지
 
+    public Button slotButton;
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateSlotUI();
+        slotButton.onClick.AddListener(OnSlotClick);
+    }
+
+    void OnSlotClick()
+    {
+        if(item != null)
+        {
+            ItemUsePopup.instance.ShowPopup(item, this);
+        }
     }
 
     //슬롯에 아이템 설정하는 함수 
